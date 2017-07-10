@@ -19,7 +19,7 @@ class Solution(object):
             return 0
         
         last, i = 0, 1
-        while i < len(nums):
+        for i in range (1, len(nums)):
             if nums[last] != nums[i]:
                 last +=1
                 nums[last] = nums[i]
@@ -30,4 +30,4 @@ class Solution(object):
 
 
 if __name__ == "__main__":
-    print (Solution().removeDuplicates([1, 1, 2,4,5,11,13,13,14,14,14,15,15,15,15]))
+    print (Solution().removeDuplicates([1,2,3,4,5,5]))
