@@ -15,8 +15,10 @@ class Solution:
 		for i in range(len(num)):
 			x=num[i]
 			if target-x in dict:
+				print target-x,num[i]
 				return (dict[target-x]+1,i+1)
 			dict[x]=i
+			print i
  
 if __name__ == "__main__":
-    print (Solution().twoSum([1,2,3,4,5,5],5))
+    print (Solution().twoSum([1,2,3,4,10,8],9))
