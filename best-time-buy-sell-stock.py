@@ -26,6 +26,12 @@ class Solution(object):
                 low = x
         return total
 
+    def maxProfit_opt2(self,prices):
+        max_profit, min_price = 0, float("inf")
+        for price in prices:
+            min_price = min(min_price,price)
+            maxProfit = max(max_profit,price - min_price)
+        return maxProfit
 
 
 
